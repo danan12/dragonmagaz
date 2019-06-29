@@ -1,0 +1,26 @@
+.product-img{
+    display: block;
+
+    margin: 0 auto;
+}
+
+.product-item{
+    padding: 10px;
+    margin-top: 20px;
+
+}
+.product-item:before{
+    content: "";
+    background-image: url('/media/fly_item_left.png');
+    position:absolute;
+}
+.buy-btn{
+    padding: 10px 30px;
+    display: block;
+    margin: 5px;
+}
+.product-title{
+    text-align: center;
+    font-size: 20px;
+
+}

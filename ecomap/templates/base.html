@@ -1,0 +1,42 @@
+{% extends 'wrapper.html' %}
+<!doctype html>
+<html lang="ru">
+<head>
+{% block head %}{% endblock %}
+{% block title %}Главная{% endblock %}
+</head>
+<body>
+{% block content %}
+    <div class="container">
+    <div class="row">
+        <div class="category">
+
+        </div>
+    </div>
+    <div class="row">
+{% for product in products %}
+<div class="product-item col-2 offset-1 card">
+  <div class="product-img">
+    <a href="">
+      <img src="{{ product.image.url }}" alt="{{ product.slug }}">
+    </a>
+  </div>
+  <div class="product-list">
+    <h5 class="product-title">{{ product.title }}</h5>
+    <div class="stars"></div>
+  <div>
+      <h6>
+          Описание:
+      </h6>
+      <p>
+      {{ product.description }}
+  </p>
+  </div>
+
+      <a href="" class="buy-btn btn btn-success">купить <span class="price">{{ product.price }}</span></a>
+    </div>
+</div>{% endfor %}
+    </div></div>
+{% endblock %}
+</body>
+</html>
